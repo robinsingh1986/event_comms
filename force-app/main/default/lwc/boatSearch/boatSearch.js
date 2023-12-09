@@ -1,5 +1,5 @@
 import { LightningElement } from 'lwc';
-import { NavigationMixin } from 'lwc';
+import { NavigationMixin } from 'lightning/navigation';
 
  // imports
  export default class BoatSearch extends NavigationMixin(LightningElement) {
@@ -29,4 +29,3 @@ import { NavigationMixin } from 'lwc';
       });
     }
   }
-  

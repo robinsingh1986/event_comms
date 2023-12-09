@@ -31,4 +31,3 @@ export default class BoatReviews extends LightningElement {
     // Helper method to use NavigationMixin to navigate to a given record on click
     navigateToRecord(event) {  }
   }
-  

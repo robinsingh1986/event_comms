@@ -40,4 +40,3 @@ export default class BoatAddReviewForm extends LightningElement {
     // TODO: it must reset each lightning-input-field
     handleReset() { }
   }
-  
