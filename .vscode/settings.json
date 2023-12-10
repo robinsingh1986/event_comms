@@ -5,5 +5,6 @@
     "**/.sfdx": true
   },
   "codeBuilder.showWelcomePage": false,
-  "salesforcedx-vscode-slds.enhancements.autoSuggest": true
+  "salesforcedx-vscode-slds.enhancements.autoSuggest": true,
+  "lwcIntellisense.folderPath": "/Users/robinsinghtyagi/robinPersonalSFRepo/event_comms-1/force-app/main/default/lwc"
 }

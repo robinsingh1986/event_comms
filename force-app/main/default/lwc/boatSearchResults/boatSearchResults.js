@@ -1,4 +1,4 @@
-import { LightningElement, api } from 'lwc';
+import { LightningElement, api, wire } from 'lwc';
 import getBoats from "@salesforce/apex/BoatDataService.getBoats";
 // ...
 const SUCCESS_TITLE = 'Success';
@@ -16,6 +16,7 @@ export default class BoatSearchResults extends LightningElement {
   // wired message context
   messageContext;
   // wired getBoats method 
+  @wire (getBoats, {filters: {boatTypeId: this.selectedBoatId}})
   wiredBoats(result) { }
   
   // public function that updates the existing boatTypeId property
