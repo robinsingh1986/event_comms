@@ -14,7 +14,7 @@
     <!-- Bottom -->
     <lightning-layout-item size="12" class="slds-p-top_small slds-is-relative">
       <lightning-spinner alternative-text="Loading" size="x-small" if:true={isLoading}></lightning-spinner>
-      <c-boat-search-results onloading={handleLoading} ondoneloading={handleDoneLoading} if:false={isLoading}></c-boat-search-results>
+      <c-boat-search-results onloading={handleLoading} ondoneloading={handleDoneLoading} onsearch={searchBoats} if:false={isLoading}></c-boat-search-results>
     </lightning-layout-item>
   </lightning-layout>
 </template>

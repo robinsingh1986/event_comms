@@ -1,5 +1,6 @@
 import { LightningElement } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
+import boatSearchresult from './boatSearchResults';
 
  // imports
  export default class BoatSearch extends NavigationMixin(LightningElement) {
@@ -13,7 +14,9 @@ import { NavigationMixin } from 'lightning/navigation';
     
     // Handles search boat event
     // This custom event comes from the form
-    searchBoats(event) { }
+    searchBoats(event) { 
+      this.template.querySelector('c-boat-search-results').searchBoats(event.detail.value);
+    }
     
     createNewBoat() { 
       const pageReference =  {

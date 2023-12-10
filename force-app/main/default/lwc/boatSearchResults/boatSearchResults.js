@@ -1,5 +1,5 @@
-import { LightningElement } from 'lwc';
-
+import { LightningElement, api } from 'lwc';
+import getBoats from "@salesforce/apex/BoatDataService.getBoats";
 // ...
 const SUCCESS_TITLE = 'Success';
 const MESSAGE_SHIP_IT     = 'Ship it!';
@@ -20,7 +20,9 @@ export default class BoatSearchResults extends LightningElement {
   
   // public function that updates the existing boatTypeId property
   // uses notifyLoading
-  searchBoats(boatTypeId) { }
+  @api searchBoats(boatTypeId) { 
+    this.selectedBoatId = boatTypeId;
+  }
   
   // this public function must refresh the boats asynchronously
   // uses notifyLoading
