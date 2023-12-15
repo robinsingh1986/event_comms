@@ -4,12 +4,13 @@
         <div class="slds-scrollable_y">
           <!-- layout horizontally aligned to the center  -->
           <!-- layout allowing multiple rows -->
-          <lightning-layout>
+          <lightning-layout horizontal-align="center">
             <!-- template looping through each boat -->
-            <template ...>
+            <template for:each={boats} for:item="boat">
               <!-- lightning-layout-item for each boat -->
-              <lightning-layout-item ...>
+              <lightning-layout-item key={boat}>
                  <!-- Each BoatTile goes here -->
+                 <c-boat-tile></c-boat-tile>
               </lightning-layout-item>
             </template>
           </lightning-layout>
@@ -19,7 +20,7 @@
         <!-- Scrollable div and lightning datatable go here -->
       </lightning-tab>
        <lightning-tab label="Boats Near Me">
-        <!-- boatsNearMe component goes here -->
+        <c-boats-near-me></c-boats-near-me>
       </lightning-tab>
     </lightning-tabset>
   </template>
