@@ -33,6 +33,7 @@ export default class BoatSearchResults extends LightningElement {
     this.isLoading = true;
     this.notifyLoading(this.isLoading);
     this.boatTypeId = boatTypeId;
+    //alert(this.boatTypeId);
   }
   
   // this public function must refresh the boats asynchronously

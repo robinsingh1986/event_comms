@@ -6,6 +6,7 @@ public with sharing class BoatDataService {
 
     @AuraEnabled(cacheable=true)
     public static List<Boat__c> getBoats(String boatTypeId) {
+        system.debug('getBiats>boatTypeId==>' + boatTypeId);
         // Without an explicit boatTypeId, the full list is desired
         String query = 'SELECT '
                      + 'Name, Description__c, Geolocation__Latitude__s, '
@@ -16,6 +17,8 @@ public with sharing class BoatDataService {
             query += ' WHERE BoatType__c = :boatTypeId';
         }
         query += ' WITH SECURITY_ENFORCED ';
+        system.debug('getBiats>boatTypeId=1=>' + query);
+        system.debug('getBiats>boatTypeId=1=>' + Database.query(query));
         return Database.query(query);
     }
 

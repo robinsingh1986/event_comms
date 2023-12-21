@@ -8,9 +8,10 @@
             <!-- template looping through each boat -->
             <template for:each={boats} for:item="boat">
               <!-- lightning-layout-item for each boat -->
-              <lightning-layout-item key={boat}>
+              <lightning-layout-item key={boat.Id}>
                  <!-- Each BoatTile goes here -->
-                 <c-boat-tile boat={boats}></c-boat-tile>
+                 <!--c-boat-tile boat={boat}></c-boat-tile-->
+                 {boat.Id}
               </lightning-layout-item>
             </template>
           </lightning-layout>

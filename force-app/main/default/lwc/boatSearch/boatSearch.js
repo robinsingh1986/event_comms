@@ -6,18 +6,20 @@ import { NavigationMixin } from 'lightning/navigation';
     isLoading = false;
     
     // Handles loading event
-    handleLoading() { }
+    handleLoading() { 
+      this.isLoading = true;
+    }
     
     // Handles done loading event
-    handleDoneLoading() { }
+    handleDoneLoading() { 
+      this.isLoading = false;
+    }
     
     // Handles search boat event
     // This custom event comes from the form
     searchBoats(event) { 
-      console.log('boatSearch.searchBoats');
-      alert(this.template.querySelector('c-boat-search-results').searchBoats(event.detail));
-      alert(this.template.querySelector('c-boat-search-results').searchBoats(event.detail.value));
-      this.template.querySelector('c-boat-search-results').searchBoats(event.detail.value);
+      this.template.querySelector('c-boat-search-results').searchBoats(event.detail.boatTypeId);
+      this.handleDoneLoading();
     }
     
     createNewBoat() { 
